@@ -72,10 +72,8 @@ class KMeansSpark():
             print('{} iterations terminated in {} seconds'.format(it, time_passed))
 
 if __name__ == '__main__':
-    
-    # master puede ser 'local[numero_de_hilos]', 'yarn-client', 'yarn-cluster'
-    master = 'local[*]'
-    sc = SparkContext(appName='KMeansSpark', master=master)
+
+    sc = SparkContext(appName='KMeansSpark')
     k = 4
     epsilon = 0.1
     max_iter = 10
