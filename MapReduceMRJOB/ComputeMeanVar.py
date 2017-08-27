@@ -39,7 +39,7 @@ if __name__ == '__main__':
     if len(sys.argv) != 2:
         print('Usage computeMeanVar: <input_file>', file=sys.stderr)
         exit(-1)
-    #print('Starting parallelized computation of mean and var')
+    print('Starting parallelized computation of mean and var')
     path = sys.argv[1]
     job = ComputeMeanVar(args=[path])
     runner = job.make_runner()
